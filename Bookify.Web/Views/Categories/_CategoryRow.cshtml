@@ -1,0 +1,29 @@
+﻿@model CategoryViewModel
+<tr>
+    <td>@Model.Name</td>
+    <td>
+        <span class="badge badge-light-@(Model.IsDeleted ? "danger" : "success") js-status">
+            @(Model.IsDeleted ? "Deleted" : "Available")
+        </span>
+    </td>
+    <td>@Model.CreatedOn</td>
+    <td class="js-last-updated-on">@Model.LastUpdatedOn</td>
+    <td>
+        <!-- start menu -->
+        <div class="text-end dropdown">
+            <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item js-render-modal" href="javascript:;" data-title="Edit Category"
+                       data-update="true" 
+                       data-url="/Categories/Edit/@Model.Id">Edit</a>
+                </li>
+                <li><a class="dropdown-item js-toggle-status" href="javascript:;" data-url="/Categories/ToggleStatus/@Model.Id">Toggle Status</a></li>
+            </ul>
+        </div>
+
+        <!-- End menu-->
+    </td>
+</tr>

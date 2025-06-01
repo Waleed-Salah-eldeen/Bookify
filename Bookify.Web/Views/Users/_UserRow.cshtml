@@ -1,0 +1,53 @@
+﻿@model UserViewModel
+
+<tr>
+    <td>@Model.FullName</td>
+    <td>@Model.Username</td>
+    <td>@Model.Email</td>
+    <td>
+        <span class="badge badge-light-@(Model.IsDeleted ? "danger" : "success") js-status">
+            @(Model.IsDeleted ? "Deleted" : "Available")
+        </span>
+    </td>
+    <td>@Model.CreatedOn</td>
+    <td class="js-updated-on">@Model.LastUpdatedOn</td>
+    <td>
+        <!-- start menu -->
+        <div class="text-end dropdown">
+            <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:;" class="dropdown-item js-render-modal"
+                       data-title="Edit Users" data-url="/Users/Edit/@Model.Id"
+                       data-update="true">
+                        Edit
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="dropdown-item js-toggle-status"
+                       data-url="/Users/ToggleStatus/@Model.Id">
+                        Toggle Status
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="javascript:;" class="dropdown-item js-render-modal"
+                       data-title="Reset Password" data-url="/Users/ResetPassword/@Model.Id"
+                       data-update="true">
+                        Reset Password
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="javascript:;" class="dropdown-item js-confirm"
+                       data-url="/Users/Unlock/@Model.Id" data-message="Are you sure that you need to unlock this user?">
+                        Unlock
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End menu-->
+    </td>
+</tr>
