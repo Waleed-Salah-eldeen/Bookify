@@ -20,3 +20,5 @@ global using Bookify.Web.Settings;
 global using Bookify.Web.Helper;
 global using Bookify.Web.Services;
 global using Microsoft.AspNetCore.Mvc.Rendering;
+global using Microsoft.Extensions.Options;
+

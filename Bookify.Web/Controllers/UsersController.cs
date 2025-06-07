@@ -1,4 +1,10 @@
-﻿namespace Bookify.Web.Controllers
+﻿using Bookify.Web.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text.Encodings.Web;
+using System.Text;
+
+namespace Bookify.Web.Controllers
 {
     [Authorize(Roles =AppRoles.Admin)]
     public class UsersController : Controller
@@ -6,12 +12,16 @@
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
+        private readonly IEmailSender _emailSender;
+        private readonly IEmailBodyBuilder _emailBodyBuilder;
 
-        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IMapper mapper)
+        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IMapper mapper, IEmailSender email, IEmailSender emailSender, IEmailBodyBuilder emailBodyBuilder)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _mapper = mapper;
+            _emailSender = emailSender;
+            _emailBodyBuilder = emailBodyBuilder;
         }
 
         public async Task<IActionResult> Index()
@@ -31,7 +41,7 @@
                                                         { 
                                                             Text = r.Name, Value = r.Name 
                                                         
-                                                        }).ToListAsync()
+                                                        }).ToListAsync()           
             };
             return PartialView("_Form" , viewModel);
         }
@@ -53,6 +63,25 @@
             if(result.Succeeded)
             {
                 await _userManager.AddToRolesAsync(user, formViewModel.SelectedRoles);
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                var callbackUrl = Url.Page(
+                    "/Account/ConfirmEmail",
+                    pageHandler: null,
+                    values: new { area = "Identity", userId = user.Id, code },
+                    protocol: Request.Scheme);
+
+                var body = _emailBodyBuilder.GetEmailBody(
+                        "https://res.cloudinary.com/devcreed/image/upload/v1668732314/icon-positive-vote-1_rdexez.svg",
+                        $"Hey {user.FullName}, thanks for joining us!",
+                        "please confirm your email",
+                        $"{HtmlEncoder.Default.Encode(callbackUrl!)}",
+                        "Active Account!"
+                    );
+
+                await _emailSender.SendEmailAsync(user.Email, "Confirm your email", body);
+
                 var viewModel = _mapper.Map<UserViewModel>(user);
                 return PartialView("_UserRow", viewModel);
             }
@@ -98,7 +127,10 @@
                     await _userManager.RemoveFromRolesAsync(user, currentRoles);
                     await _userManager.AddToRolesAsync(user, formViewModel.SelectedRoles);
                 }
-                var userViewModel = _mapper.Map<UserViewModel>(user);
+
+				await _userManager.UpdateSecurityStampAsync(user);
+
+				var userViewModel = _mapper.Map<UserViewModel>(user);
                 return PartialView("_UserRow", userViewModel);
             }
             return BadRequest(string.Join(',', result.Errors.Select(e => e.Description)));
@@ -154,6 +186,8 @@
             user.LastUpdatedById = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
             user.LastUpdatedOn = DateTime.Now;
             await _userManager.UpdateAsync(user);
+            if (user.IsDeleted)
+               await _userManager.UpdateSecurityStampAsync(user);
             return Ok(user.LastUpdatedOn.ToString());
         }
 

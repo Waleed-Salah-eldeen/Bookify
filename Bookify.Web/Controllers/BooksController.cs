@@ -7,7 +7,7 @@ using System.Linq.Dynamic.Core;
 namespace Bookify.Web.Controllers
 {
     [Authorize(Roles = AppRoles.Archive)]
-    public class BooksController : Controller
+    public class BooksController : Controller 
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
