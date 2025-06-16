@@ -27,7 +27,6 @@ namespace Bookify.Web.Core.ViewModels.BooksViewModels
         public string? ImageUrl { get; set; }
         public string? ThumbnailImageUrl { get; set; }
 
-
         [MaxLength(200, ErrorMessage = ErrorMessages.MaxLength)]
         public string Hall { get; set; } = null!;
 

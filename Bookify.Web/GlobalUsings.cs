@@ -10,6 +10,7 @@ global using Bookify.Web.Core.ViewModels.AuthorsViewModels;
 global using Bookify.Web.Core.ViewModels.BooksViewModels;
 global using Bookify.Web.Core.ViewModels.BookCopiesViewModels;
 global using Bookify.Web.Core.ViewModels.UsersViewModels;
+global using Bookify.Web.Core.ViewModels.SubscribersViewModels;
 global using AutoMapper;
 global using Bookify.Web.Data;
 global using Bookify.Web.Filters;
