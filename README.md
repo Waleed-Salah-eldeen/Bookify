@@ -7,8 +7,8 @@
 ## Features
 
 ### ✅ Implemented
-- **Book Management** (CRUD operations)
-- **User Authentication** (Login with ASP.NET Core Identity)
+- **Book Management**
+- **User Authentication**
 - **Role-Based Access Control** (Admin, Receptionist, Archivist)
 - **Borrow/Return System with subscriber management**
 - **Cloud-hosted book covers**
@@ -31,5 +31,5 @@
 - **ASP.NET Core Identity**
 
 ### Frontend
-- **UI**: Razor Pages with Bootstrap 5
+- **UI**: Razor Pages with Bootstrap 5, HTML and CSS
 - **Client-side**: jQuery 
