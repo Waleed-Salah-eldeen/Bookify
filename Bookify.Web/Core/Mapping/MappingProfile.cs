@@ -34,7 +34,10 @@ namespace Bookify.Web.Core.Mapping
 
             //BookCopy
             CreateMap<BookCopy, BookCopyViewModel>()
-                .ForMember(des => des.BookTitle, opt => opt.MapFrom(src => src.Book!.Title));
+                .ForMember(des => des.BookTitle, opt => opt.MapFrom(src => src.Book!.Title))
+                .ForMember(dest => dest.BookId, opt => opt.MapFrom(src => src.Book!.Id))
+                .ForMember(dest => dest.BookThumbnailUrl, opt => opt.MapFrom(src => src.Book!.ThumbnailImageUrl));
+
 
             CreateMap<BookCopy, BookCopyFormViewModel>();
 
@@ -67,6 +70,11 @@ namespace Bookify.Web.Core.Mapping
 				.ForMember(dest => dest.Governorate, opt => opt.MapFrom(src => src.Governorate!.Name));
 
             CreateMap<Subscription, SubscriptionViewModel>();
+
+
+            //Rentals
+            CreateMap<Rental, RentalViewModel>();
+            CreateMap<RentalCopy, RentalCopyViewModel>();
         }
     }
 }

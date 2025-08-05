@@ -25,12 +25,12 @@ function showErrorMessage(message = 'Something went wrong!') {
     });
 }
 
-function DisableTheButton() {
-    $('body :submit').attr('disabled', 'disabled').attr('data-kt-indicator', 'on');
+function DisableTheButton(btn) {
+    $(btn).attr('disabled', 'disabled').attr('data-kt-indicator', 'on');
 }
 function onModalBegin()
 {
-    DisableTheButton();   
+    DisableTheButton($('#Modal').find(':submit'));   
 }
 function onModalSuccess(item)
 {
@@ -173,7 +173,7 @@ $(document).ready(function ()
             });
         }
         var isValid = $(this).valid();
-        if (isValid) DisableTheButton();
+        if (isValid) DisableTheButton($(this).find(':submit')); 
 
     });
 

@@ -22,7 +22,7 @@ namespace Bookify.Web.Tasks
         public async Task PrepareExpirationAlert()
         {
             var subscribers = _context.Subscribers.Include(s => s.Subscriptions)
-                                                .Where(s => s.Subscriptions
+                                                .Where(s => !s.IsBlackListed && s.Subscriptions
                                                 .OrderByDescending(x => x.EndDate).First().EndDate == DateTime.Today.AddDays(5))
                                                 .ToList();
 
