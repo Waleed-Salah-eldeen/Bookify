@@ -2,8 +2,6 @@
 
 📚 A modern library management system built with **ASP.NET Core MVC** for managing books, users, and borrow/return operations.
 
-> **Note**: This project is currently under active development.
-
 ## Features
 
 ### ✅ Implemented
