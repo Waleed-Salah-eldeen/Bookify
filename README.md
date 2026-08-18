@@ -33,7 +33,7 @@ A modern library management system built with **ASP.NET Core MVC** for managing 
     <td width="50%" align="center"><b>Add Category Modal</b></td>
   </tr>
   <tr>
-    <td><img src="./screenshots/category.png" width="100%" alt="Categories Overview"></td>
+    <td><img src="screenshots/category.png" width="100%" alt="Categories Overview"></td>
     <td><img src="screenshots/addcategory.png" width="100%" alt="Add Category Modal"></td>
   </tr>
 </table>
