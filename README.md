@@ -20,19 +20,19 @@
 
 ### 🔐 Login
 
-![Login](Screenshots/p1.png)
+![Login](./Screenshots/p1.png)
 
 ### 📧 Email Confirmation
 
-![Email Confirmation](Screenshots/p2.png)
+![Email Confirmation](./Screenshots/p2.png)
 
 ### 👤 Profile
 
-![Profile](Screenshots/p3.png)
+![Profile](./Screenshots/p3.png)
 
 ### ✏️ Profile Management
 
-![Profile Management](Screenshots/p4.png)
+![Profile Management](./Screenshots/p4.png)
 
 ## Technology Stack
 
