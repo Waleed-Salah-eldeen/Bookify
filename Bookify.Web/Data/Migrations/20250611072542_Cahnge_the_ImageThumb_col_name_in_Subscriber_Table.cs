@@ -8,10 +8,7 @@ namespace Bookify.Web.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "ImageThumbnailUrl",
-                table: "Subscribers",
-                newName: "ThumbnailImageUrl");
+            
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
