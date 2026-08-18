@@ -1,24 +1,49 @@
-# Bookify: Library Management System
+<div align="center">
 
-📚 A modern library management system built with **ASP.NET Core MVC** for managing books, users, and borrow/return operations.
+  <h1>📚 Bookify</h1>
+  <h3>Modern Library Management System</h3>
 
-## Features
+  <p>
+    An enterprise-grade library management platform built with <b>ASP.NET Core MVC</b> to streamline book cataloging, subscriber management, and borrowing workflows.
+  </p>
 
-### ✅ Implemented
+  <p>
+    <a href="#-features">Features</a> •
+    <a href="#-tech-stack">Tech Stack</a> •
+    <a href="#-screenshots">Screenshots</a>
+  </p>
 
-* **Book Management**
-* **User Authentication**
-* **Role-Based Access Control** (Admin, Receptionist, Archivist)
-* **Borrow/Return System with subscriber management**
-* **Cloud-hosted book covers**
-* **Automated background tasks using Hangfire**
-* **Advanced search & filtering**
-* **Export reports (PDF/Excel)**
+  ---
 
-### 🔜 Planned
+</div>
 
-* Admin dashboard with analytics
-* Apply the Repository pattern
+## ✨ Features
+
+### 🚀 Live Features
+* **📖 Book Management:** Complete catalog management, stock tracking, and metadata handling.
+* **🔐 Authentication & Security:** ASP.NET Core Identity integration with role-based authorization (Admin, Receptionist, Archivist).
+* **🔄 Borrow & Return System:** Automated subscriber checking and workflow management.
+* **☁️ Cloud Asset Storage:** Dynamic cover images hosted on the cloud.
+* **⚙️ Background Processing:** Automated scheduled tasks and processes powered by **Hangfire**.
+* **🔍 Search & Filtering:** Fast multi-criteria search engine for users and books.
+* **📊 Reporting:** PDF and Excel report generation for system analytics.
+
+### 🔜 Roadmap
+* [ ] Interactive Admin Dashboard with live analytics
+* [ ] Refactoring architecture to Repository & Unit of Work patterns
+
+---
+
+## 🛠 Tech Stack
+
+| Domain | Technologies Used |
+| :--- | :--- |
+| **Core Architecture** | ASP.NET Core MVC, Entity Framework Core, LINQ |
+| **Database** | SQL Server, EF Core Migrations |
+| **Security & Identity**| ASP.NET Core Identity, Data Protection API |
+| **Background Jobs** | Hangfire |
+| **Libraries & Utilities**| AutoMapper |
+| **Frontend UI** | Razor Pages, Bootstrap 5, jQuery, HTML5/CSS3 |
 
 ---
 
@@ -26,52 +51,26 @@
 
 ### 🔐 Authentication
 
-<table>
-  <tr>
-    <td width="50%" align="center"><b>Login</b></td>
-    <td width="50%" align="center"><b>Email Confirmation</b></td>
-  </tr>
-  <tr>
-    <td>
-      <img src="./Screenshots/p1.png" width="100%" alt="Login">
-    </td>
-    <td>
-      <img src="./Screenshots/p2.png" width="100%" alt="Email Confirmation">
-    </td>
-  </tr>
-</table>
+<div align="center">
 
-### 👤 Profile
+| Login | Email Confirmation |
+| :---: | :---: |
+| <img src="screenshots/p1.png" width="400" alt="Login"> | <img src="screenshots/p2.png" width="400" alt="Email Confirmation"> |
 
-<table>
-  <tr>
-    <td width="50%" align="center"><b>Profile</b></td>
-    <td width="50%" align="center"><b>Profile</b></td>
-  </tr>
-  <tr>
-    <td>
-      <img src="./Screenshots/p3.png" width="100%" alt="Profile">
-    </td>
-    <td>
-      <img src="./Screenshots/p4.png" width="100%" alt="Profile">
-    </td>
-  </tr>
-</table>
+</div>
+
+### 👤 Profile Management
+
+<div align="center">
+
+| User Profile View | Edit Profile |
+| :---: | :---: |
+| <img src="screenshots/p3.png" width="400" alt="Profile View"> | <img src="screenshots/p4.png" width="400" alt="Edit Profile"> |
+
+</div>
 
 ---
 
-## Technology Stack
-
-### Backend
-
-* **ASP.NET Core MVC**
-* **Entity Framework Core**
-* **LINQ**
-* **AutoMapper | Hangfire | Data Protection API**
-* **SQL Server**
-* **ASP.NET Core Identity**
-
-### Frontend
-
-* **UI**: Razor Pages with Bootstrap 5, HTML and CSS
-* **Client-side**: jQuery
+<div align="center">
+  <sub>Built with ❤️ using ASP.NET Core MVC</sub>
+</div>
