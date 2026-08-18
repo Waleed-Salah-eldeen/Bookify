@@ -19,10 +19,28 @@ A modern library management system built with **ASP.NET Core MVC** for managing 
     <td width="50%" align="center"><b>Email Confirmation</b></td>
   </tr>
   <tr>
-    <td><img src="screenshots/p1.png" width="100%" alt="Login"></td>
-    <td><img src="screenshots/p2.png" width="100%" alt="Email Confirmation"></td>
+    <td><img src="Screenshots/p1.png" width="100%" alt="Login"></td>
+    <td><img src="Screenshots/p2.png" width="100%" alt="Email Confirmation"></td>
   </tr>
 </table>
+
+<br>
+
+### 🗂️ Categories Management
+<table>
+  <tr>
+    <td width="50%" align="center"><b>Categories Overview</b></td>
+    <td width="50%" align="center"><b>Add Category Modal</b></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/category.png" width="100%" alt="Categories Overview"></td>
+    <td><img src="Screenshots/addcategory.png" width="100%" alt="Add Category Modal"></td>
+  </tr>
+</table>
+
+<br>
+
+![Category Added](Screenshots/categoryadded.png)
 
 <br>
 
@@ -33,8 +51,8 @@ A modern library management system built with **ASP.NET Core MVC** for managing 
     <td width="50%" align="center"><b>Profile</b></td>
   </tr>
   <tr>
-    <td><img src="screenshots/p3.png" width="100%" alt="Profile"></td>
-    <td><img src="screenshots/p4.png" width="100%" alt="Profile"></td>
+    <td><img src="Screenshots/p3.png" width="100%" alt="Profile"></td>
+    <td><img src="Screenshots/p4.png" width="100%" alt="Profile"></td>
   </tr>
 </table>
 
