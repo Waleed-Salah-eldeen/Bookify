@@ -33,10 +33,10 @@
   </tr>
   <tr>
     <td>
-      <img src="Screenshots/p1.png" width="100%" alt="Login">
+      <img src="./Screenshots/p1.png" width="100%" alt="Login">
     </td>
     <td>
-      <img src="Screenshots/p2.png" width="100%" alt="Email Confirmation">
+      <img src="./Screenshots/p2.png" width="100%" alt="Email Confirmation">
     </td>
   </tr>
 </table>
@@ -50,10 +50,10 @@
   </tr>
   <tr>
     <td>
-      <img src="Screenshots/p3.png" width="100%" alt="Profile">
+      <img src="./Screenshots/p3.png" width="100%" alt="Profile">
     </td>
     <td>
-      <img src="Screenshots/p4.png" width="100%" alt="Profile">
+      <img src="./Screenshots/p4.png" width="100%" alt="Profile">
     </td>
   </tr>
 </table>
