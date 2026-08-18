@@ -1,76 +1,77 @@
-<div align="center">
+# 📚 Bookify: Library Management System
 
-  <h1>📚 Bookify</h1>
-  <h3>Modern Library Management System</h3>
+A modern library management system built with **ASP.NET Core MVC** for managing books, users, and borrow/return operations.
 
-  <p>
-    An enterprise-grade library management platform built with <b>ASP.NET Core MVC</b> to streamline book cataloging, subscriber management, and borrowing workflows.
-  </p>
-
-  <p>
-    <a href="#-features">Features</a> •
-    <a href="#-tech-stack">Tech Stack</a> •
-    <a href="#-screenshots">Screenshots</a>
-  </p>
-
-  ---
-
-</div>
-
-## ✨ Features
-
-### 🚀 Live Features
-* **📖 Book Management:** Complete catalog management, stock tracking, and metadata handling.
-* **🔐 Authentication & Security:** ASP.NET Core Identity integration with role-based authorization (Admin, Receptionist, Archivist).
-* **🔄 Borrow & Return System:** Automated subscriber checking and workflow management.
-* **☁️ Cloud Asset Storage:** Dynamic cover images hosted on the cloud.
-* **⚙️ Background Processing:** Automated scheduled tasks and processes powered by **Hangfire**.
-* **🔍 Search & Filtering:** Fast multi-criteria search engine for users and books.
-* **📊 Reporting:** PDF and Excel report generation for system analytics.
-
-### 🔜 Roadmap
-* [ ] Interactive Admin Dashboard with live analytics
-* [ ] Refactoring architecture to Repository & Unit of Work patterns
-
----
-
-## 🛠 Tech Stack
-
-| Domain | Technologies Used |
-| :--- | :--- |
-| **Core Architecture** | ASP.NET Core MVC, Entity Framework Core, LINQ |
-| **Database** | SQL Server, EF Core Migrations |
-| **Security & Identity**| ASP.NET Core Identity, Data Protection API |
-| **Background Jobs** | Hangfire |
-| **Libraries & Utilities**| AutoMapper |
-| **Frontend UI** | Razor Pages, Bootstrap 5, jQuery, HTML5/CSS3 |
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-512BD4?logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-Language-239120?logo=csharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-CC292B?logo=microsoftsqlserver&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
+![Hangfire](https://img.shields.io/badge/Hangfire-Background%20Tasks-FF4500)
 
 ---
 
 ## 📸 Screenshots
 
 ### 🔐 Authentication
+<table>
+  <tr>
+    <td width="50%" align="center"><b>Login</b></td>
+    <td width="50%" align="center"><b>Email Confirmation</b></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/p1.png" width="100%" alt="Login"></td>
+    <td><img src="Screenshots/p2.png" width="100%" alt="Email Confirmation"></td>
+  </tr>
+</table>
 
-<div align="center">
+<br>
 
-| Login | Email Confirmation |
-| :---: | :---: |
-| <img src="screenshots/p1.png" width="400" alt="Login"> | <img src="screenshots/p2.png" width="400" alt="Email Confirmation"> |
-
-</div>
-
-### 👤 Profile Management
-
-<div align="center">
-
-| User Profile View | Edit Profile |
-| :---: | :---: |
-| <img src="screenshots/p3.png" width="400" alt="Profile View"> | <img src="screenshots/p4.png" width="400" alt="Edit Profile"> |
-
-</div>
+### 👤 Profile
+<table>
+  <tr>
+    <td width="50%" align="center"><b>Profile</b></td>
+    <td width="50%" align="center"><b>Profile</b></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/p3.png" width="100%" alt="Profile"></td>
+    <td><img src="Screenshots/p4.png" width="100%" alt="Profile"></td>
+  </tr>
+</table>
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ using ASP.NET Core MVC</sub>
-</div>
+## ✨ Features
+
+### ✅ Implemented
+- 📖 **Book Management**
+- 🔐 **User Authentication**
+- 👥 **Role-Based Access Control** (Admin, Receptionist, Archivist)
+- 🔄 **Borrow/Return System with subscriber management**
+- ☁️ **Cloud-hosted book covers**
+- ⚙️ **Automated background tasks using Hangfire**
+- 🔍 **Advanced search & filtering**
+- 📊 **Export reports (PDF/Excel)**
+
+### 🔜 Planned
+- Admin dashboard with analytics
+- Apply the Repository pattern
+
+---
+
+## 🧰 Technology Stack
+
+### Backend
+| Technology |
+| --- |
+| ASP.NET Core MVC |
+| Entity Framework Core |
+| LINQ |
+| AutoMapper \| Hangfire \| Data Protection API |
+| SQL Server |
+| ASP.NET Core Identity |
+
+### Frontend
+| Layer | Technology |
+| --- | --- |
+| **UI** | Razor Pages with Bootstrap 5, HTML and CSS |
+| **Client-side** | jQuery |
