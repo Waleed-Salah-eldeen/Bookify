@@ -8,7 +8,6 @@
 
 * **Book Management**
 * **User Authentication**
-* **Email Confirmation**
 * **Role-Based Access Control** (Admin, Receptionist, Archivist)
 * **Borrow/Return System with subscriber management**
 * **Cloud-hosted book covers**
@@ -16,23 +15,50 @@
 * **Advanced search & filtering**
 * **Export reports (PDF/Excel)**
 
-## Screenshots
+### 🔜 Planned
 
-### 🔐 Login
+* Admin dashboard with analytics
+* Apply the Repository pattern
 
-![Login](./Screenshots/p1.png)
+---
 
-### 📧 Email Confirmation
+## 📸 Screenshots
 
-![Email Confirmation](./Screenshots/p2.png)
+### 🔐 Authentication
+
+<table>
+  <tr>
+    <td width="50%" align="center"><b>Login</b></td>
+    <td width="50%" align="center"><b>Email Confirmation</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="Screenshots/p1.png" width="100%" alt="Login">
+    </td>
+    <td>
+      <img src="Screenshots/p2.png" width="100%" alt="Email Confirmation">
+    </td>
+  </tr>
+</table>
 
 ### 👤 Profile
 
-![Profile](./Screenshots/p3.png)
+<table>
+  <tr>
+    <td width="50%" align="center"><b>Profile</b></td>
+    <td width="50%" align="center"><b>Profile</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="Screenshots/p3.png" width="100%" alt="Profile">
+    </td>
+    <td>
+      <img src="Screenshots/p4.png" width="100%" alt="Profile">
+    </td>
+  </tr>
+</table>
 
-### ✏️ Profile Management
-
-![Profile Management](./Screenshots/p4.png)
+---
 
 ## Technology Stack
 
@@ -41,13 +67,11 @@
 * **ASP.NET Core MVC**
 * **Entity Framework Core**
 * **LINQ**
-* **AutoMapper**
-* **Hangfire**
-* **Data Protection API**
+* **AutoMapper | Hangfire | Data Protection API**
 * **SQL Server**
 * **ASP.NET Core Identity**
 
 ### Frontend
 
-* **UI:** Razor Pages with Bootstrap 5, HTML, and CSS
-* **Client-side:** jQuery
+* **UI**: Razor Pages with Bootstrap 5, HTML and CSS
+* **Client-side**: jQuery
